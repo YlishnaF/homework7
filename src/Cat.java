@@ -1,6 +1,10 @@
+import java.util.Random;
+
 public class Cat {
     String name;
-    final int APPETITE = 10;
+
+    Random random  = new Random();
+    final int APPETITE= random.nextInt(50);
     final boolean satiety = false;
 
     public Cat(String name) {
@@ -8,9 +12,8 @@ public class Cat {
     }
 
     public void eat(Plate plate) {
-        System.out.println("Cat " + name + " eat...");
+        System.out.println("Кот " + name + " ест...");
         plate.decreaseFood(APPETITE, satiety);
-
 
     }
 

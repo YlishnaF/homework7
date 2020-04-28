@@ -1,5 +1,7 @@
 public class Plate {
     private int food;
+    private int additionalPortion = 100;
+
 
     public Plate(int food) {
         this.food = food;
@@ -15,7 +17,7 @@ public class Plate {
 
     public void decreaseFood(int amount, boolean fullness) {
         if(amount > food){
-            System.out.println("Еды для кота недостаточно!");
+            System.out.println("Еды для кота недостаточно! Кот расстроен!");
             return;
         }
         food -= amount;
@@ -25,6 +27,6 @@ public class Plate {
     }
 
     public void increaseFood(){
-        food +=food;
+        food +=additionalPortion;
     }
 }
